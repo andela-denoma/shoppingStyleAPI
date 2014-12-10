@@ -4,6 +4,7 @@
 
 body{
   background: #f0f8ff;
+  font-family: 'Inconsolata' sans-serif;
 }
 
 /*********************
@@ -40,8 +41,7 @@ box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.17);
   z-index: 100;
 }
 .main_header h2{
-font-family: 'Inconsolata' sans-serif;
-font-size: 2em;
+font-size: 1.5em;
 color: #fff;
 padding-left: 3%;
 }
@@ -51,12 +51,12 @@ font-size: 3em;
 .logo{
 height: 120px;
 width: 150px;
-margin-left: 45%;
+float: left;
+margin-left: 3%;
 }
-.wrapper h1{
+.wrapper h1, form{
 text-align: center;
-padding-top: 1%;
-
+padding: 4% 10% 0 0;
 }
 
 
@@ -80,7 +80,7 @@ input[type=search] {
 }
 #search{
   padding: 0.65%;
-  width: 30%;
+  width: 40%;
 }
 #search:focus{
   border: 1px solid #000;
@@ -116,28 +116,39 @@ input[type=search] {
 .gallery img{
   width: 100px;
   height: 100px;
-  border: 10px solid #000;
+  border: 2px solid #000;
 }
  
  /***********************
     LIST IMAGES
  ***********************/
 
-.image{
-  padding: 3px 5px 0;
-  width: 150px;
-  height: 200px;
-}
 ul li{
-  background: #fff;
-  border: 2px solid white;
   margin: 60px;
   display: inline-block;
 }
+
+#wrapper {
+  margin-left: 3%;
+  width: 300px;
+}
+
+.image{
+  margin-left: 20%;
+  padding: 10%;
+  display: inline-block;
+  width: auto;
+  height: 250px;
+}
+
 .name, .id, .price, .stock, .retailer{
+  padding-top: 2%;
+  margin-left: 30%;
   text-align: left;
-  background: #000;
   text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
 }
 
 
