@@ -10,7 +10,7 @@ var shoppingAPI = {
     shoppingAPI.submitBtn.addEventListener("click", function(e){
     e.preventDefault();
       var product = shoppingAPI.searchField.val();
-        if(product === ""){
+        if(!product.trim()){
           alert("Please enter a name...");
           return false;
         } 
