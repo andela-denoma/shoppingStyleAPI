@@ -10,7 +10,7 @@ var shoppingAPI = {
     shoppingAPI.submitBtn.addEventListener("click", function(e){
     e.preventDefault();
       var product = shoppingAPI.searchField.val();
-        if(product === ""){
+        if(!product.trim()){
           alert("Please enter a name...");
           return false;
         } 
@@ -22,7 +22,7 @@ var shoppingAPI = {
           pid: "uid5369-26250213-59",
           fts: shoppingAPI.searchField.val(),
           min: 0,
-          count: "20",
+          count: "30",
           format :"jsonp",
         },
     $.getJSON(shoppingAPI.shoppingApiurl, shoppingApiUser, shoppingAPI.productInfo);
@@ -33,12 +33,12 @@ var shoppingAPI = {
       var productHTML = '<ul>';
       $.each(response.products, function(i, dress) {
         console.log(response);
-        productHTML += '<li class="wrapper">';
+        productHTML += '<li id="wrapper">';
         productHTML += '<img src="' + dress.images[3].url + '" class="image">';
         productHTML += '<p class="name"> NAME: ' + dress.name + '</p>';
         productHTML += '<p class="id"> ID: ' + dress.id + '</p>';
         productHTML += '<p class="stock"> STOCK: ' + dress.inStock + '</p>';
-        productHTML += '<p class="retailer"> retailer: ' + dress.retailer + '</p>';
+        productHTML += '<p class="retailer"> RETAILER: ' + dress.retailer + '</p>';
         productHTML+= '</li>';
       }); // end each
       productHTML += '</ul>';
